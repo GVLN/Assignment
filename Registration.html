@@ -1,0 +1,120 @@
+<html>
+<head>
+<script>
+//var d=document.getElementById("day");
+function val(){
+var name1=document.getElementById("fname").value;
+var name2=document.getElementById("mname").value;
+var name3=document.getElementById("lname").value;
+
+var email=document.getElementById("email").value;
+var pass=document.getElementById("pass").value;
+
+var pass1=document.getElementById("cpass").value;
+
+var mobile=document.getElementById("mobile").value;
+
+var p=document.getElementById("p");
+console.log(name1+""+name3);
+console.log(email+""+pass+""+pass1);
+if(pass=="" || email=="" || name1=="" || name3=="" || pass1==""){
+
+alert("hi");
+p.innerHTML="Fill all the details above.";
+p.style.border= "thick solid pink";
+}
+
+else if(pass==pass1){
+p.innerHTML="Your registration is sucessfull";
+p.style.display="thick solid pink";
+alert("hi love");
+//document.white(a1.html);
+
+}
+else{
+p.innerHTML="password and confirm passwordshould be the same"
+}
+}
+</script>
+<style>
+text-option:first{
+color#999;
+}
+.a{text-align:right;}
+table{
+color:violet;
+padding-left:150px;
+}
+option:hover
+{
+opacity:0.5;
+}
+.but{
+background-color:green;
+  color:white;
+font-size:24px;}
+</style>
+</head>
+<body>
+<div style="margin-left:150px;">
+<h1>Sign Up</h1>
+<h2>It's free and anyone can join</h2>
+<table>
+<form>
+<tr><td class="a">
+<p>First Name:</p>
+</td>
+<td>
+<input type="text" name="name" id="fname" autofocus/>
+</td></tr>
+<tr><td class="a">
+<p>Middle Name:</p>
+</td>
+<td>
+<input type="text" name="name" id="mname"/>
+</td></tr>
+<tr><td class="a">
+<p>Last Name:</p>
+</td>
+<td>
+<input type="text" name="name" id="lname"/>
+</td></tr>
+<tr><td class="a">
+<p>Your email:</p>
+</td>
+<td class="b">
+<input type="email" name="email" id="email" required />
+</td></tr>
+<tr><td class="a">
+<p>Mobile Number:</p>
+</td>
+<td class="b">
+<input type="number" name="mobile" id="mobile" required />
+</td></tr>
+<tr><td class="a">
+<p>Password:</p>
+</td>
+<td class="b">
+<input type="password" name="pass" id="pass" required />
+</td></tr>
+<tr><td class="a">
+<p>Confirm Password:</p>
+</td>
+<td class="b">
+<input type="password" name="pass1" id="cpass" required />
+</td></tr>
+<tr><td>
+</td>
+<td class="b">
+<input type="button" onclick="val()" name="sign" href="a1.html" value="Register" class="but"/>
+<a href="a1.html"><input type="button" value="login"class="but"></a>
+</td></tr>
+</table>
+</form>
+<br/>
+<br/>
+<div style="text-align:center">
+<span id="p"></p></span>
+</div>
+</body>
+</html>

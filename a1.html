@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>
+Assignment
+</title>
+<style>
+
+		
+
+</style>
+</head>
+<body>
+
+<script>
+	
+var id = document.getElementById("text1");
+var pass = document.getElementById("text2");
+
+//innerHTML=b;
+var ar=[
+			{Id:1,Name:"lakshman",Email:"sm2lakshman@gmail.com",Class:"MCA",City:"ongole",Country:"india"},
+			{Id:2,Name:"Raju",Email:"raju@gmail.com",Class:"MBA",City:"Bangalore",Country:"india"},
+			{Id:3,Name:"Lara",Email:"lara@gmail.com",Class:"Msc",City:"Hydrabad",Country:"india"},
+			{Id:4,Name:"Narayana",Email:"narayana@gmil.com",Class:"MCA",City:"ongole",Country:"india"},
+			{Id:5,Name:"latha",Email:"latha@gmail.com",Class:"Msc",City:"Bangalore",Country:"india"},
+			{Id:6,Name:"Radha",Email:"radha@gmail.com",Class:"MBA",City:"ongole",Country:"india"}	
+		]
+		console.log(a);
+		
+		console.log(b);
+						if( id.value == "user" && pass.value == "123456" )
+							{
+								alert("hi how are you");
+							}
+							else{
+									alert("hi");
+									}
+									
+							
+								
+ 		function f1()
+		{
+		alert("hi function one");
+
+		var b1 = document.getElementById("table1");
+		
+		var str = "<tr><th>sid</th><th>sname</th><th>pno</th><th>language</th><th>email</th><th>city</th></tr>";
+		for(var i in ar)
+			{
+				str= str+"<tr>";
+				str = str+"<td>"+ar[i].Id+"</td>";
+				str = str+"<td>"+ar[i].Name+"</td>";
+				str = str+"<td>"+ar[i].Email+"</td>";
+				str = str+"<td>"+ar[i].Class+"</td>";
+				str = str+"<td>"+ar[i].City+"</td>";
+				str = str+"<td>"+ar[i].Country+"</td>";
+				str = str+"</tr>"
+			}
+			b1.innerHTML=str;
+	}
+function f2()
+		{
+			var obj1 = document.getElementById("id");
+			 var obj2 = document.getElementById("name");
+			 var obj3 = document.getElementById("email");
+			 var obj4 = document.getElementById("class");
+			// var obj5 = document.getElementById("year");
+			 var obj5 = document.getElementById("city");
+			 var obj6 = document.getElementById("country");
+			 
+			var a = { };
+			a.Id = obj1.value;
+			a.Name = obj2.value;
+			a.Email = obj3.value;
+			a.Class = obj4.value;
+			a.City = obj5.value;
+			a.Country= obj6.value;
+			ar.push(a);
+			//alert("hi");
+			f1();
+			//ar.
+		}
+function f3()
+{	
+
+	
+	var obj1 = document.getElementById("id").value;
+	var s = ar.indexOf(obj1);
+	ar.splice(s,1);
+	
+	//console.log(ar.rows);
+	//var obj5 = document.getElementById("deptno");
+	//var b = ar.indexOf(obj5.value);
+	//ar.splice(b,1);
+	//	alert("hi");
+	//var s = ar.indexOf(obj5.value);
+	//ar.splice(s,1);
+	f1();
+	/* var n =ar.indexOf("obj1.value");
+	if(n==-1)
+	{
+	alert("courese not available");
+	}
+	else{
+	ar.splice(n,1);
+	f1();
+	} */
+}
+
+
+		
+		 
+
+
+
+function SignUp()
+{
+alert("hi LOVELY");
+}
+</script>
+<table id="table1" border="2px">
+<input type="text" placeholder="Enter user name" id="text1"><br>
+<input type="password" placeholder="Enter password" id="text2"><br>
+<input type="button" value="login" onclick="f1()">
+
+<a href="Registration.html"><input type="button" value="signup"></a>
+<hr/> 
+<input  id="id" type="text"  placeholder="sid" />
+<input  id="name" type="text"  placeholder="Student Name" />
+<input  id="email" type="text"  placeholder="Email" />
+<input  id="class" type="text"  placeholder="Class" />
+<input  id="year" type="text"  placeholder="Year" />
+<input  id="city" type="text"  placeholder="City" />
+<input  id="country" type="text"  placeholder="Country" /><br><br><br>
+
+<input  type="button" value="Add Emp" onclick="f2()" />
+<input  type="button" value="Remove Emp" onclick="f3()"/>
+</table>
+</body>
+</html>
